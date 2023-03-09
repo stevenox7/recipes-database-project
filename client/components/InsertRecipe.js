@@ -18,7 +18,7 @@ const InsertRecipe = () => {
 }
     return (
         <div className="insertRecipeBox">
-          <form onClick={handleClick}>
+          <form onSubmit={handleClick}>
             <label>Insert your recipe</label>
             <br></br>
             <div className=""></div>

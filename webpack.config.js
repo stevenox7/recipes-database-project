@@ -32,20 +32,29 @@ module.exports = {
             target: 'http://localhost:3000/',
             secure: false,
           },
+          '/recipes': {
+            target: 'http://localhost:3000',
+            secure: false,
+          }
           // '/assets/**': {
           //   target: 'http://localhost:3000/',
           //   secure: false,
           // },
         },
       },
-      
+      experiments: {
+        topLevelAwait: true
+      },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/, 
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            plugins: ['@babel/plugin-syntax-top-level-await'],
+          }
         }
       },
       {

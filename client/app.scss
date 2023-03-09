@@ -14,3 +14,23 @@ form{
 input .recipeForm{
     width: 100;
 }
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.recipeCards {
+    width: 175px;
+    height: 200px;
+    border: 2px solid green;
+    border-radius: 15px;
+    box-sizing: border-box;
+    // justify-content: center;
+    // align-items: center;
+  }
+  .recipeCards p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }

@@ -15,5 +15,11 @@ recipeController.createRecipe = async (req, res, next) => {
     console.log(createdRecipe)
     return next()
 }
+recipeController.pullData = async (req, res, next) => {
+    const recipes = await models.Recipe.find({})
+    console.log(recipes)
+    res.locals.allRecipes = recipes
+    return next();
+}
 
 module.exports = recipeController

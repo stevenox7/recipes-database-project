@@ -12,6 +12,9 @@ app.use('/', express.static(path.join(__dirname, '../dist')))
 // app.get('/', (req, res) => {
 //     res.sendFile(__dirname, './dist/index.html')
 // })
+app.get('/recipes', recipeController.pullData, (req, res) => {
+    res.send(res.locals.allRecipes)
+})
 app.post('/insertRecipe', recipeController.getRecipeInfo, recipeController.createRecipe, (req, res) => {
     // console.log(res.locals.recipes.instructions)
     res.status(200).send('Good Job')
