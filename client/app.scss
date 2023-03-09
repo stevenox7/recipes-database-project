@@ -1,0 +1,16 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input .recipeForm{
+    width: 100;
+}
