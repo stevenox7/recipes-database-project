@@ -22,7 +22,7 @@ async function scrapeRecipes(url) {
     const instructions = await instructionsList.jsonValue()
     await browser.close()
     
-    console.log({ingredients, instructions})
+    return {ingredients, instructions}
     //*[@id="tasty-recipes-81678"]/div/div[3]
 
 }
